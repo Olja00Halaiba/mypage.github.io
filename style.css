@@ -1,0 +1,487 @@
+body {
+    background-color: #0F103F;
+    margin: 0;
+    padding: 0;
+}
+
+.first-section {
+    height: 100vh;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+.nav-links-mobile{
+    display: none;
+}
+.nav-links-mobile.open {
+    display: block;
+}
+
+.mobile-burger {
+    cursor: pointer;
+}
+
+#burger {
+    transition: 0.5s ease;
+}
+
+.line1, .line2, .line3 {
+    transition: 0.5s ease;
+}
+
+.nav-links-mobile {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links-mobile.open {
+    display: block;
+}
+
+.burger-active .line1 {
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    stroke: #ff0000; /* opcjonalna zmiana koloru */
+}
+
+.burger-active .line2 {
+    opacity: 0; /* ukrywa środkową linię */
+}
+
+.burger-active .line3 {
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+    stroke: #ff0000; /* opcjonalna zmiana koloru */
+}
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.top-nav svg:hover {
+    -webkit-box-shadow: -3px 11px 39px 5px rgba(171, 113, 198, 1);
+    -moz-box-shadow: -3px 11px 39px 5px rgba(171, 113, 198, 1);
+    box-shadow: -3px 11px 39px 5px rgba(171, 113, 198, 1);
+    border-radius: 50%;
+}
+
+.top-nav a {
+    align-content: center;
+    border-style: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0) linear-gradient(109deg, #FFFFFF, #fdfdfd, #c520a4) repeat scroll 0% 0%/200% 200%;
+    background-clip: border-box;
+    color: transparent;
+    background-clip: text;
+    background-clip: text;
+  
+}
+
+.top-nav a:hover {
+    animation: GradientAnimation 2s ease-in-out infinite;
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 100% 50%
+    }
+}
+
+.firstPlanet {
+    margin-top: 20px;
+  
+    z-index: -1;
+    position: absolute;
+    width: fit-content;
+}
+
+.firstPlanet svg {
+    width: 20vw;
+    height: auto;
+}
+
+.secondPlanet {
+    /* display: flex;
+    justify-content: end; */
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    z-index: -1;
+
+}
+
+.secondPlanet svg {
+    width: 67vw;
+    height: auto;
+}
+
+.main-text {
+    /* position: absolute;
+    top: 35%;
+    right: 67%; */
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: -webkit-center;
+    width: 50%;
+    margin: 0 auto;
+    height: 70%;
+    justify-content: center;
+}
+
+#main_h1 {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 130%;
+    /* or 78px */
+
+    color: #FFFFFF;
+
+}
+
+.buttons-main {
+    display: flex;
+    gap: 30px;
+
+}
+
+.buttons-main a {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 143.2%;
+    /* or 24px */
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+
+
+}
+
+#first-button {
+    padding: 13px 67px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    /* backdrop-filter: blur(11.5757px); */
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 30px;
+
+
+}
+
+#second-button {
+
+    background: linear-gradient(107.21deg, #C961DE 24.43%, #2954A3 68.95%);
+    box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15);
+    border-radius: 30px;
+    padding: 13px 42px;
+
+
+}
+
+.second-section {
+    background-color: #0F103F;
+    height: 100vh;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/***********************/
+/* RESET CSS */
+/***********************/
+
+
+.overlay a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+/* HELPER CLASSES */
+.overlay .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 143.2%;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/***********************/
+/* NAVIGATION MENU */
+/***********************/
+
+/* OVERLAY */
+.overlay {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100%);
+}
+
+/* NAV MENU ITEMS */
+.overlay nav ul {
+  height: 100vh;
+  height: 100svh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay nav ul li {
+  height: 25%;
+}
+
+.overlay nav li:nth-of-type(1) {
+    background-color: #0F103F;
+}
+
+.overlay nav li:nth-of-type(2) {
+    background-color: #0F103F;
+}
+
+.overlay nav li:nth-of-type(3) {
+    background-color: #0F103F;
+}
+
+.overlay nav li:nth-of-type(4) {
+    background-color: #0F103F;
+}
+
+.overlay nav li:nth-of-type(5) {
+    background-color: #0F103F;
+}
+
+.overlay nav li a {
+  letter-spacing: 0.4rem;
+  font-size: 2rem;
+}
+
+.overlay nav li a:hover,
+nav li a:active {
+  transform: scale(1.2);
+  
+}
+
+/***********************/
+/* NAV SLIDE IN ANIMATION */
+/***********************/
+
+.overlay .slide-in-1 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+
+.overlay .slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.overlay .slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.overlay .slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.overlay .slide-in-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/***********************/
+/* NAV SLIDE OUT ANIMATION */
+/***********************/
+
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/***********************/
+/* HAMBURGER MENU ANIMATION */
+/***********************/
+
+.hamburger-menu {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu-bar1,
+.menu-bar2,
+.menu-bar3 {
+  width: 3.5rem;
+  height: 0.2rem;
+  background: rgb(171,113,198);
+  background: linear-gradient(90deg, rgba(171,113,198,1) 0%, rgba(138,110,224,1) 51%, rgba(106,108,249,1) 100%);
+  margin: 0.8rem 0;
+  /* transition: 0.4s; */
+}
+
+.menu-bar2 {
+  width: 2rem;
+  margin-left: auto;
+}
+
+/* ROTATE FIRST BAR */
+.active .menu-bar1 {
+  transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+}
+
+/* FADE OUT SECOND BAR */
+.active .menu-bar2 {
+  opacity: 0;
+}
+
+/* ROTATE LAST BAR */
+.active .menu-bar3 {
+  transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+}
+
+
+/* BELOW 832px (Tablets) */
+@media (max-width: 54em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+ .main-text{
+    width: 90%;
+ }
+}
+
+
+
+/* media */
+@media only screen and (max-width: 1000px) {
+    .top-nav {
+        gap: 50px;
+        margin-top: 20px;
+    }
+    .top-nav a {
+        font-size: 18px;
+    }
+}
+/* @media only screen and (max-width: 800px) {
+    .top-nav {
+        gap: 30px;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .top-nav a {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .top-nav  {
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 25px;
+    }
+    .firstPlanet{
+        margin-left: 0px;
+    }
+ .buttons-main{
+    flex-direction: column;
+ }
+ #main_h1{
+    font-size: 30px;
+ }
+ .main-text{
+    height: 90%;
+ }
+ #first-button, #second-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 11px;
+ }
+     
+}
+
